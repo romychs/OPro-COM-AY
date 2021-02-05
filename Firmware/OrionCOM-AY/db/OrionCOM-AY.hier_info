@@ -1,0 +1,71 @@
+|OrionCOM_AY
+clk => clk.IN2
+reset_n => reset_n.IN2
+iorq_n => sel3x.IN0
+m1_n => cs_ay_lb.IN1
+wr_n => w1.IN0
+wr_n => bdir.IN0
+rd_n => bc1.IN0
+wait_n => w1.IN1
+a[0] => cs_ay_3f.IN0
+a[0] => cs_ay_3e.IN0
+a[0] => Equal1.IN15
+a[1] => Equal1.IN14
+a[2] => cs_vv2_n.IN1
+a[2] => cs_vi_n.IN0
+a[2] => cs_ay_opro.IN0
+a[2] => Equal1.IN13
+a[3] => cs_vv1_n.IN0
+a[3] => cs_vi_n.IN0
+a[3] => cs_ay_opro.IN1
+a[3] => Equal1.IN12
+a[4] => Equal0.IN7
+a[4] => Equal1.IN11
+a[5] => Equal0.IN6
+a[5] => Equal1.IN10
+a[6] => Equal0.IN5
+a[6] => Equal1.IN9
+a[7] => Equal0.IN4
+a[7] => Equal1.IN8
+a[8] => cs_ay_bf.IN0
+a[8] => cs_ay_ff.IN1
+a[9] => cs_ay_bf.IN1
+a[9] => cs_ay_ff.IN0
+rdy1 => irq3.IN0
+rdy2 => irq4.IN0
+cs_vi_n <= cs_vi_n.DB_MAX_OUTPUT_PORT_TYPE
+cs_vv1_n <= cs_vv1_n.DB_MAX_OUTPUT_PORT_TYPE
+cs_vv2_n <= cs_vv2_n.DB_MAX_OUTPUT_PORT_TYPE
+bdir <= bdir.DB_MAX_OUTPUT_PORT_TYPE
+bc1 <= bc1.DB_MAX_OUTPUT_PORT_TYPE
+w1 <= w1.DB_MAX_OUTPUT_PORT_TYPE
+clk1 <= ViClkDiv:viClkDiv.clk_out
+clk2 <= AyClkDiv:ayClkDiv.clk_out
+reset <= reset.DB_MAX_OUTPUT_PORT_TYPE
+irq3 <= irq3.DB_MAX_OUTPUT_PORT_TYPE
+irq4 <= irq4.DB_MAX_OUTPUT_PORT_TYPE
+debug <= AyClkDiv:ayClkDiv.clk_out
+
+
+|OrionCOM_AY|AyClkDiv:ayClkDiv
+clk => sum[0].CLK
+clk => sum[1].CLK
+clk => sum[2].CLK
+clk => sum[3].CLK
+clk => sum[4].CLK
+clk => sum[5].CLK
+clk => sum[6].CLK
+clk => sum[7].CLK
+clk => sum[8].CLK
+clk => sum[9].CLK
+reset_n => always0.IN0
+clk_out <= sum[9].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|OrionCOM_AY|ViClkDiv:viClkDiv
+clk => div1[0].CLK
+clk => div1[1].CLK
+reset_n => always0.IN0
+clk_out <= div1[1].DB_MAX_OUTPUT_PORT_TYPE
+
+

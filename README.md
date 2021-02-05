@@ -1,2 +1,5 @@
-# OPro-COM-AY
-Two serial ports and AY-sound board for Orion-PRO amateur personal computer
+OPro-COM-AY
+===========
+
+Плата с двумя COM-портами и со звуковым чипом AY-3-8912 для персонального любительского компьютера Орион-ПРО.
+

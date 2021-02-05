@@ -1,0 +1,9 @@
+Fitter Status : Successful - Fri Feb  5 16:21:26 2021
+Quartus II 32-bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Revision Name : OrionCOM-AY
+Top-level Entity Name : OrionCOM_AY
+Family : MAX7000S
+Device : EPM7064STC44-7
+Timing Models : Final
+Total macrocells : 22 / 64 ( 34 % )
+Total pins : 35 / 36 ( 97 % )

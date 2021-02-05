@@ -1,0 +1,442 @@
+Fitter report for OrionCOM-AY
+Fri Feb  5 16:21:26 2021
+Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Fitter Summary
+  3. Fitter Settings
+  4. Parallel Compilation
+  5. Pin-Out File
+  6. Fitter Resource Usage Summary
+  7. Input Pins
+  8. Output Pins
+  9. All Package Pins
+ 10. I/O Standard
+ 11. Dedicated Inputs I/O
+ 12. Output Pin Default Load For Reported TCO
+ 13. Fitter Resource Utilization by Entity
+ 14. Control Signals
+ 15. Global & Other Fast Signals
+ 16. Non-Global High Fan-Out Signals
+ 17. Other Routing Usage Summary
+ 18. LAB Macrocells
+ 19. Parallel Expander
+ 20. Logic Cell Interconnection
+ 21. Fitter Device Options
+ 22. Fitter Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------+
+; Fitter Summary                                                              ;
++---------------------------+-------------------------------------------------+
+; Fitter Status             ; Successful - Fri Feb  5 16:21:26 2021           ;
+; Quartus II 32-bit Version ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name             ; OrionCOM-AY                                     ;
+; Top-level Entity Name     ; OrionCOM_AY                                     ;
+; Family                    ; MAX7000S                                        ;
+; Device                    ; EPM7064STC44-7                                  ;
+; Timing Models             ; Final                                           ;
+; Total macrocells          ; 22 / 64 ( 34 % )                                ;
+; Total pins                ; 35 / 36 ( 97 % )                                ;
++---------------------------+-------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Fitter Settings                                                                                             ;
++----------------------------------------------------------------------------+----------------+---------------+
+; Option                                                                     ; Setting        ; Default Value ;
++----------------------------------------------------------------------------+----------------+---------------+
+; Device                                                                     ; EPM7064STC44-7 ;               ;
+; Fitter Effort                                                              ; Standard Fit   ; Auto Fit      ;
+; Use smart compilation                                                      ; Off            ; Off           ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On             ; On            ;
+; Enable compact report table                                                ; Off            ; Off           ;
+; Optimize Multi-Corner Timing                                               ; Off            ; Off           ;
+; Optimize Timing for ECOs                                                   ; Off            ; Off           ;
+; Regenerate full fit report during ECO compiles                             ; Off            ; Off           ;
+; Optimize IOC Register Placement for Timing                                 ; Normal         ; Normal        ;
+; Fitter Initial Placement Seed                                              ; 1              ; 1             ;
+; Slow Slew Rate                                                             ; Off            ; Off           ;
+; Force Fitter to Avoid Periphery Placement Warnings                         ; Off            ; Off           ;
++----------------------------------------------------------------------------+----------------+---------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------+
+; Pin-Out File ;
++--------------+
+The pin-out file can be found in /opt/cpld/OrionCOM-AY/output_files/OrionCOM-AY.pin.
+
+
++-------------------------------------------------+
+; Fitter Resource Usage Summary                   ;
++------------------------------+------------------+
+; Resource                     ; Usage            ;
++------------------------------+------------------+
+; Logic cells                  ; 22 / 64 ( 34 % ) ;
+; Registers                    ; 11 / 64 ( 17 % ) ;
+; Number of pterms used        ; 51               ;
+; I/O pins                     ; 35 / 36 ( 97 % ) ;
+;     -- Clock pins            ; 1 / 2 ( 50 % )   ;
+;     -- Dedicated input pins  ; 2 / 2 ( 100 % )  ;
+;                              ;                  ;
+; Global signals               ; 2                ;
+; Shareable expanders          ; 0 / 64 ( 0 % )   ;
+; Parallel expanders           ; 1 / 60 ( 2 % )   ;
+; Cells using turbo bit        ; 22 / 64 ( 34 % ) ;
+; Maximum fan-out              ; 12               ;
+; Highest non-global fan-out   ; 10               ;
+; Total fan-out                ; 144              ;
+; Average fan-out              ; 2.53             ;
++------------------------------+------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Input Pins                                                                                                                                    ;
++---------+-------+----------+-----+-----------------------+--------------------+--------+----------------+--------------+----------------------+
+; Name    ; Pin # ; I/O Bank ; LAB ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; I/O Standard ; Location assigned by ;
++---------+-------+----------+-----+-----------------------+--------------------+--------+----------------+--------------+----------------------+
+; a[0]    ; 2     ; --       ; 1   ; 2                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; a[1]    ; 3     ; --       ; 1   ; 2                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; a[2]    ; 5     ; --       ; 1   ; 5                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; a[3]    ; 6     ; --       ; 1   ; 5                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; a[4]    ; 8     ; --       ; 2   ; 5                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; a[5]    ; 10    ; --       ; 2   ; 5                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; a[6]    ; 11    ; --       ; 2   ; 5                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; a[7]    ; 12    ; --       ; 2   ; 5                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; a[8]    ; 15    ; --       ; 2   ; 1                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; a[9]    ; 18    ; --       ; 3   ; 2                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; clk     ; 37    ; --       ; --  ; 11                    ; 0                  ; yes    ; no             ; TTL          ; User                 ;
+; iorq_n  ; 21    ; --       ; 3   ; 5                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; m1_n    ; 23    ; --       ; 3   ; 2                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; rd_n    ; 19    ; --       ; 3   ; 1                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; rdy1    ; 38    ; --       ; --  ; 1                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; rdy2    ; 31    ; --       ; 4   ; 1                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; reset_n ; 39    ; --       ; --  ; 12                    ; 0                  ; yes    ; no             ; TTL          ; User                 ;
+; wait_n  ; 22    ; --       ; 3   ; 1                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; wr_n    ; 20    ; --       ; 3   ; 3                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
++---------+-------+----------+-----+-----------------------+--------------------+--------+----------------+--------------+----------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Output Pins                                                                                                                                                                                  ;
++----------+-------+----------+-----+-----------------+----------------+------------+---------------+--------------+----------------------+-------+----------------------+---------------------+
+; Name     ; Pin # ; I/O Bank ; LAB ; Output Register ; Slow Slew Rate ; Open Drain ; TRI Primitive ; I/O Standard ; Location assigned by ; Load  ; Output Enable Source ; Output Enable Group ;
++----------+-------+----------+-----+-----------------+----------------+------------+---------------+--------------+----------------------+-------+----------------------+---------------------+
+; bc1      ; 42    ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; bdir     ; 43    ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; clk1     ; 27    ; --       ; 4   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; clk2     ; 44    ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; cs_vi_n  ; 25    ; --       ; 3   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; cs_vv1_n ; 35    ; --       ; 4   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; cs_vv2_n ; 30    ; --       ; 4   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; debug    ; 33    ; --       ; 4   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; irq3     ; 14    ; --       ; 2   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; irq4     ; 13    ; --       ; 2   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; reset    ; 34    ; --       ; 4   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
+; w1       ; 28    ; --       ; 4   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ; -                    ; -                   ;
++----------+-------+----------+-----+-----------------+----------------+------------+---------------+--------------+----------------------+-------+----------------------+---------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; All Package Pins                                                                                      ;
++----------+------------+----------+----------------+--------+--------------+---------+-----------------+
+; Location ; Pad Number ; I/O Bank ; Pin Name/Usage ; Dir.   ; I/O Standard ; Voltage ; User Assignment ;
++----------+------------+----------+----------------+--------+--------------+---------+-----------------+
+; 1        ; 6          ; --       ; TDI            ; input  ; TTL          ;         ; Y               ;
+; 2        ; 7          ; --       ; a[0]           ; input  ; TTL          ;         ; Y               ;
+; 3        ; 8          ; --       ; a[1]           ; input  ; TTL          ;         ; Y               ;
+; 4        ; 9          ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 5        ; 10         ; --       ; a[2]           ; input  ; TTL          ;         ; Y               ;
+; 6        ; 11         ; --       ; a[3]           ; input  ; TTL          ;         ; Y               ;
+; 7        ; 12         ; --       ; TMS            ; input  ; TTL          ;         ; Y               ;
+; 8        ; 13         ; --       ; a[4]           ; input  ; TTL          ;         ; Y               ;
+; 9        ; 14         ; --       ; VCC            ; power  ;              ;         ;                 ;
+; 10       ; 15         ; --       ; a[5]           ; input  ; TTL          ;         ; Y               ;
+; 11       ; 16         ; --       ; a[6]           ; input  ; TTL          ;         ; Y               ;
+; 12       ; 17         ; --       ; a[7]           ; input  ; TTL          ;         ; Y               ;
+; 13       ; 18         ; --       ; irq4           ; output ; TTL          ;         ; Y               ;
+; 14       ; 19         ; --       ; irq3           ; output ; TTL          ;         ; Y               ;
+; 15       ; 20         ; --       ; a[8]           ; input  ; TTL          ;         ; Y               ;
+; 16       ; 21         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 17       ; 22         ; --       ; VCC            ; power  ;              ;         ;                 ;
+; 18       ; 23         ; --       ; a[9]           ; input  ; TTL          ;         ; Y               ;
+; 19       ; 24         ; --       ; rd_n           ; input  ; TTL          ;         ; Y               ;
+; 20       ; 25         ; --       ; wr_n           ; input  ; TTL          ;         ; Y               ;
+; 21       ; 26         ; --       ; iorq_n         ; input  ; TTL          ;         ; Y               ;
+; 22       ; 27         ; --       ; wait_n         ; input  ; TTL          ;         ; Y               ;
+; 23       ; 28         ; --       ; m1_n           ; input  ; TTL          ;         ; Y               ;
+; 24       ; 29         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 25       ; 30         ; --       ; cs_vi_n        ; output ; TTL          ;         ; Y               ;
+; 26       ; 31         ; --       ; TCK            ; input  ; TTL          ;         ; Y               ;
+; 27       ; 32         ; --       ; clk1           ; output ; TTL          ;         ; Y               ;
+; 28       ; 33         ; --       ; w1             ; output ; TTL          ;         ; Y               ;
+; 29       ; 34         ; --       ; VCC            ; power  ;              ;         ;                 ;
+; 30       ; 35         ; --       ; cs_vv2_n       ; output ; TTL          ;         ; Y               ;
+; 31       ; 36         ; --       ; rdy2           ; input  ; TTL          ;         ; Y               ;
+; 32       ; 37         ; --       ; TDO            ; output ; TTL          ;         ; Y               ;
+; 33       ; 38         ; --       ; debug          ; output ; TTL          ;         ; Y               ;
+; 34       ; 39         ; --       ; reset          ; output ; TTL          ;         ; Y               ;
+; 35       ; 40         ; --       ; cs_vv1_n       ; output ; TTL          ;         ; Y               ;
+; 36       ; 41         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 37       ; 42         ; --       ; clk            ; input  ; TTL          ;         ; Y               ;
+; 38       ; 43         ; --       ; rdy1           ; input  ; TTL          ;         ; Y               ;
+; 39       ; 0          ; --       ; reset_n        ; input  ; TTL          ;         ; Y               ;
+; 40       ; 1          ; --       ; GND+           ;        ;              ;         ;                 ;
+; 41       ; 2          ; --       ; VCC            ; power  ;              ;         ;                 ;
+; 42       ; 3          ; --       ; bc1            ; output ; TTL          ;         ; Y               ;
+; 43       ; 4          ; --       ; bdir           ; output ; TTL          ;         ; Y               ;
+; 44       ; 5          ; --       ; clk2           ; output ; TTL          ;         ; Y               ;
++----------+------------+----------+----------------+--------+--------------+---------+-----------------+
+Note: Pin directions (input, output or bidir) are based on device operating in user mode.
+
+
++--------------------------------------------------------------------------------------------------+
+; I/O Standard                                                                                     ;
++--------------+------------+----------------------+-------------------+-------------------+-------+
+; I/O Standard ; Input Vref ; Dedicated Input Pins ; Pins in I/O Bank1 ; Pins in I/O Bank2 ; Total ;
++--------------+------------+----------------------+-------------------+-------------------+-------+
+; TTL          ; -          ; 3                    ; 0                 ; 0                 ; 3     ;
++--------------+------------+----------------------+-------------------+-------------------+-------+
+
+
++-----------------------------------------------------------------------+
+; Dedicated Inputs I/O                                                  ;
++---------+-------+-------+-------+--------------+------------+---------+
+; Name    ; Pin # ; Type  ; VCCIO ; I/O Standard ; Input Vref ; Current ;
++---------+-------+-------+-------+--------------+------------+---------+
+; clk     ; 37    ; Input ; --    ; TTL          ; -          ; 0 mA    ;
+; rdy1    ; 38    ; Input ; --    ; TTL          ; -          ; 0 mA    ;
+; reset_n ; 39    ; Input ; --    ; TTL          ; -          ; 0 mA    ;
++---------+-------+-------+-------+--------------+------------+---------+
+
+
++-----------------------------------------------+
+; Output Pin Default Load For Reported TCO      ;
++--------------+-------+------------------------+
+; I/O Standard ; Load  ; Termination Resistance ;
++--------------+-------+------------------------+
+; TTL          ; 10 pF ; Not Available          ;
++--------------+-------+------------------------+
+Note: User assignments will override these defaults. The user specified values are listed in the Output Pins and Bidir Pins tables.
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                               ;
++---------------------------------------+------------+------+------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node            ; Macrocells ; Pins ; Full Hierarchy Name                                                                      ; Library Name ;
++---------------------------------------+------------+------+------------------------------------------------------------------------------------------+--------------+
+; |OrionCOM_AY                          ; 22         ; 35   ; |OrionCOM_AY                                                                             ; work         ;
+;    |AyClkDiv:ayClkDiv|                ; 11         ; 0    ; |OrionCOM_AY|AyClkDiv:ayClkDiv                                                           ; work         ;
+;       |lpm_add_sub:Add0|              ; 1          ; 0    ; |OrionCOM_AY|AyClkDiv:ayClkDiv|lpm_add_sub:Add0                                          ; work         ;
+;          |addcore:adder[1]|           ; 1          ; 0    ; |OrionCOM_AY|AyClkDiv:ayClkDiv|lpm_add_sub:Add0|addcore:adder[1]                         ; work         ;
+;             |a_csnbuffer:result_node| ; 1          ; 0    ; |OrionCOM_AY|AyClkDiv:ayClkDiv|lpm_add_sub:Add0|addcore:adder[1]|a_csnbuffer:result_node ; work         ;
+;    |ViClkDiv:viClkDiv|                ; 2          ; 0    ; |OrionCOM_AY|ViClkDiv:viClkDiv                                                           ; work         ;
++---------------------------------------+------------+------+------------------------------------------------------------------------------------------+--------------+
+
+
++------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                ;
++---------+----------+---------+--------------+--------+----------------------+------------------+
+; Name    ; Location ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ;
++---------+----------+---------+--------------+--------+----------------------+------------------+
+; clk     ; PIN_37   ; 11      ; Clock        ; yes    ; On                   ; --               ;
+; reset_n ; PIN_39   ; 12      ; Async. clear ; yes    ; On                   ; --               ;
++---------+----------+---------+--------------+--------+----------------------+------------------+
+
+
++------------------------------------------------------------------------+
+; Global & Other Fast Signals                                            ;
++---------+----------+---------+----------------------+------------------+
+; Name    ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ;
++---------+----------+---------+----------------------+------------------+
+; clk     ; PIN_37   ; 11      ; On                   ; --               ;
+; reset_n ; PIN_39   ; 12      ; On                   ; --               ;
++---------+----------+---------+----------------------+------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Non-Global High Fan-Out Signals                                                                       ;
++---------------------------------------------------------------------------------------------+---------+
+; Name                                                                                        ; Fan-Out ;
++---------------------------------------------------------------------------------------------+---------+
+; ViClkDiv:viClkDiv|div1[0]                                                                   ; 10      ;
+; AyClkDiv:ayClkDiv|sum[1]                                                                    ; 9       ;
+; AyClkDiv:ayClkDiv|sum[2]                                                                    ; 8       ;
+; AyClkDiv:ayClkDiv|sum[3]                                                                    ; 7       ;
+; AyClkDiv:ayClkDiv|sum[4]                                                                    ; 6       ;
+; a[7]                                                                                        ; 5       ;
+; a[6]                                                                                        ; 5       ;
+; a[5]                                                                                        ; 5       ;
+; a[4]                                                                                        ; 5       ;
+; a[3]                                                                                        ; 5       ;
+; a[2]                                                                                        ; 5       ;
+; iorq_n                                                                                      ; 5       ;
+; AyClkDiv:ayClkDiv|sum[5]                                                                    ; 5       ;
+; AyClkDiv:ayClkDiv|sum[6]                                                                    ; 4       ;
+; wr_n                                                                                        ; 3       ;
+; AyClkDiv:ayClkDiv|sum[9]                                                                    ; 3       ;
+; AyClkDiv:ayClkDiv|sum[8]                                                                    ; 3       ;
+; AyClkDiv:ayClkDiv|sum[7]                                                                    ; 3       ;
+; a[9]                                                                                        ; 2       ;
+; a[1]                                                                                        ; 2       ;
+; a[0]                                                                                        ; 2       ;
+; m1_n                                                                                        ; 2       ;
+; rdy2                                                                                        ; 1       ;
+; rdy1                                                                                        ; 1       ;
+; a[8]                                                                                        ; 1       ;
+; wait_n                                                                                      ; 1       ;
+; rd_n                                                                                        ; 1       ;
+; AyClkDiv:ayClkDiv|lpm_add_sub:Add0|addcore:adder[1]|a_csnbuffer:result_node|sout_node[1]~32 ; 1       ;
+; AyClkDiv:ayClkDiv|sum[9]~1                                                                  ; 1       ;
+; bc1~9                                                                                       ; 1       ;
+; bdir~7                                                                                      ; 1       ;
+; cs_vv1_n~2                                                                                  ; 1       ;
+; ViClkDiv:viClkDiv|div1[1]                                                                   ; 1       ;
+; cs_vi_n~3                                                                                   ; 1       ;
+; cs_vv2_n~2                                                                                  ; 1       ;
+; reset_n~4                                                                                   ; 1       ;
+; rdy2~1                                                                                      ; 1       ;
+; rdy1~1                                                                                      ; 1       ;
+; w1~1                                                                                        ; 1       ;
++---------------------------------------------------------------------------------------------+---------+
+
+
++-------------------------------------------------+
+; Other Routing Usage Summary                     ;
++-----------------------------+-------------------+
+; Other Routing Resource Type ; Usage             ;
++-----------------------------+-------------------+
+; Output enables              ; 0 / 6 ( 0 % )     ;
+; PIA buffers                 ; 45 / 144 ( 31 % ) ;
++-----------------------------+-------------------+
+
+
++----------------------------------------------------------------------+
+; LAB Macrocells                                                       ;
++----------------------------------------+-----------------------------+
+; Number of Macrocells  (Average = 5.50) ; Number of LABs  (Total = 4) ;
++----------------------------------------+-----------------------------+
+; 0                                      ; 0                           ;
+; 1                                      ; 1                           ;
+; 2                                      ; 1                           ;
+; 3                                      ; 0                           ;
+; 4                                      ; 0                           ;
+; 5                                      ; 0                           ;
+; 6                                      ; 1                           ;
+; 7                                      ; 0                           ;
+; 8                                      ; 0                           ;
+; 9                                      ; 0                           ;
+; 10                                     ; 0                           ;
+; 11                                     ; 0                           ;
+; 12                                     ; 0                           ;
+; 13                                     ; 1                           ;
++----------------------------------------+-----------------------------+
+
+
++---------------------------------------------------------+
+; Parallel Expander                                       ;
++--------------------------+------------------------------+
+; Parallel Expander Length ; Number of Parallel Expanders ;
++--------------------------+------------------------------+
+; 0                        ; 0                            ;
+; 1                        ; 1                            ;
++--------------------------+------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Logic Cell Interconnection                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ;
++-----+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; LAB ; Logic Cell ; Input                                                                                                                                                                                                                                                                                                                                                ; Output                                                                                                                                                                                                                                                              ;
++-----+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+;  A  ; LC4        ; clk, reset_n                                                                                                                                                                                                                                                                                                                                         ; ViClkDiv:viClkDiv|div1[1], AyClkDiv:ayClkDiv|sum[1], AyClkDiv:ayClkDiv|sum[2], AyClkDiv:ayClkDiv|sum[3], AyClkDiv:ayClkDiv|sum[4], AyClkDiv:ayClkDiv|sum[5], AyClkDiv:ayClkDiv|sum[6], AyClkDiv:ayClkDiv|sum[7], AyClkDiv:ayClkDiv|sum[8], AyClkDiv:ayClkDiv|sum[9] ;
+;  A  ; LC14       ; wr_n, a[6], a[7], iorq_n, a[4], a[5], a[2], a[3], m1_n, a[0], a[1], a[9]                                                                                                                                                                                                                                                                             ; bdir                                                                                                                                                                                                                                                                ;
+;  A  ; LC1        ; clk, reset_n, AyClkDiv:ayClkDiv|sum[1], ViClkDiv:viClkDiv|div1[0]                                                                                                                                                                                                                                                                                    ; AyClkDiv:ayClkDiv|sum[1], AyClkDiv:ayClkDiv|sum[2], AyClkDiv:ayClkDiv|sum[3], AyClkDiv:ayClkDiv|sum[4], AyClkDiv:ayClkDiv|sum[5], AyClkDiv:ayClkDiv|sum[6], AyClkDiv:ayClkDiv|sum[7], AyClkDiv:ayClkDiv|sum[8], AyClkDiv:ayClkDiv|sum[9]                            ;
+;  A  ; LC16       ; a[8], m1_n, a[1], a[9], wr_n, a[0], a[6], a[7], iorq_n, a[4], a[5], a[2], a[3], rd_n                                                                                                                                                                                                                                                                 ; bc1                                                                                                                                                                                                                                                                 ;
+;  A  ; LC2        ; clk, reset_n, AyClkDiv:ayClkDiv|sum[1], ViClkDiv:viClkDiv|div1[0], AyClkDiv:ayClkDiv|sum[2]                                                                                                                                                                                                                                                          ; AyClkDiv:ayClkDiv|sum[2], AyClkDiv:ayClkDiv|sum[3], AyClkDiv:ayClkDiv|sum[4], AyClkDiv:ayClkDiv|sum[5], AyClkDiv:ayClkDiv|sum[6], AyClkDiv:ayClkDiv|sum[7], AyClkDiv:ayClkDiv|sum[8], AyClkDiv:ayClkDiv|sum[9]                                                      ;
+;  A  ; LC5        ; clk, reset_n, AyClkDiv:ayClkDiv|sum[2], AyClkDiv:ayClkDiv|sum[1], ViClkDiv:viClkDiv|div1[0], AyClkDiv:ayClkDiv|sum[3]                                                                                                                                                                                                                                ; AyClkDiv:ayClkDiv|sum[3], AyClkDiv:ayClkDiv|sum[4], AyClkDiv:ayClkDiv|sum[5], AyClkDiv:ayClkDiv|sum[6], AyClkDiv:ayClkDiv|sum[7], AyClkDiv:ayClkDiv|sum[8], AyClkDiv:ayClkDiv|sum[9]                                                                                ;
+;  A  ; LC7        ; clk, reset_n, AyClkDiv:ayClkDiv|sum[3], AyClkDiv:ayClkDiv|sum[2], AyClkDiv:ayClkDiv|sum[1], ViClkDiv:viClkDiv|div1[0], AyClkDiv:ayClkDiv|sum[4]                                                                                                                                                                                                      ; AyClkDiv:ayClkDiv|sum[4], AyClkDiv:ayClkDiv|sum[5], AyClkDiv:ayClkDiv|sum[6], AyClkDiv:ayClkDiv|sum[7], AyClkDiv:ayClkDiv|sum[8], AyClkDiv:ayClkDiv|sum[9]                                                                                                          ;
+;  A  ; LC8        ; clk, reset_n, AyClkDiv:ayClkDiv|sum[1], AyClkDiv:ayClkDiv|sum[3], AyClkDiv:ayClkDiv|sum[2], ViClkDiv:viClkDiv|div1[0], AyClkDiv:ayClkDiv|sum[4], AyClkDiv:ayClkDiv|sum[5]                                                                                                                                                                            ; AyClkDiv:ayClkDiv|sum[5], AyClkDiv:ayClkDiv|sum[6], AyClkDiv:ayClkDiv|sum[7], AyClkDiv:ayClkDiv|sum[8], AyClkDiv:ayClkDiv|sum[9]                                                                                                                                    ;
+;  A  ; LC6        ; clk, reset_n, AyClkDiv:ayClkDiv|sum[1], AyClkDiv:ayClkDiv|sum[3], AyClkDiv:ayClkDiv|sum[2], ViClkDiv:viClkDiv|div1[0], AyClkDiv:ayClkDiv|sum[5], AyClkDiv:ayClkDiv|sum[4], AyClkDiv:ayClkDiv|sum[6]                                                                                                                                                  ; AyClkDiv:ayClkDiv|sum[6], AyClkDiv:ayClkDiv|sum[7], AyClkDiv:ayClkDiv|sum[8], AyClkDiv:ayClkDiv|sum[9]                                                                                                                                                              ;
+;  A  ; LC12       ; clk, reset_n, AyClkDiv:ayClkDiv|sum[1], AyClkDiv:ayClkDiv|sum[3], AyClkDiv:ayClkDiv|sum[2], AyClkDiv:ayClkDiv|sum[6], ViClkDiv:viClkDiv|div1[0], AyClkDiv:ayClkDiv|sum[5], AyClkDiv:ayClkDiv|sum[4], AyClkDiv:ayClkDiv|sum[7]                                                                                                                        ; AyClkDiv:ayClkDiv|sum[7], AyClkDiv:ayClkDiv|sum[8], AyClkDiv:ayClkDiv|lpm_add_sub:Add0|addcore:adder[1]|a_csnbuffer:result_node|sout_node[1]~32                                                                                                                     ;
+;  A  ; LC13       ; clk, reset_n, AyClkDiv:ayClkDiv|sum[1], AyClkDiv:ayClkDiv|sum[5], AyClkDiv:ayClkDiv|sum[4], AyClkDiv:ayClkDiv|sum[7], ViClkDiv:viClkDiv|div1[0], AyClkDiv:ayClkDiv|sum[3], AyClkDiv:ayClkDiv|sum[2], AyClkDiv:ayClkDiv|sum[6], AyClkDiv:ayClkDiv|sum[8]                                                                                              ; AyClkDiv:ayClkDiv|sum[8], AyClkDiv:ayClkDiv|sum[9], AyClkDiv:ayClkDiv|lpm_add_sub:Add0|addcore:adder[1]|a_csnbuffer:result_node|sout_node[1]~32                                                                                                                     ;
+;  A  ; LC11       ; clk, reset_n, AyClkDiv:ayClkDiv|lpm_add_sub:Add0|addcore:adder[1]|a_csnbuffer:result_node|sout_node[1]~32, AyClkDiv:ayClkDiv|sum[5], AyClkDiv:ayClkDiv|sum[8], AyClkDiv:ayClkDiv|sum[6], AyClkDiv:ayClkDiv|sum[4], AyClkDiv:ayClkDiv|sum[1], AyClkDiv:ayClkDiv|sum[3], AyClkDiv:ayClkDiv|sum[2], ViClkDiv:viClkDiv|div1[0], AyClkDiv:ayClkDiv|sum[9] ; AyClkDiv:ayClkDiv|sum[9], clk2, AyClkDiv:ayClkDiv|sum[9]~1                                                                                                                                                                                                          ;
+;  A  ; LC10       ; AyClkDiv:ayClkDiv|sum[7], AyClkDiv:ayClkDiv|sum[8]                                                                                                                                                                                                                                                                                                   ; AyClkDiv:ayClkDiv|sum[9]                                                                                                                                                                                                                                            ;
+;  B  ; LC19       ; rdy1                                                                                                                                                                                                                                                                                                                                                 ; irq3                                                                                                                                                                                                                                                                ;
+;  B  ; LC20       ; rdy2                                                                                                                                                                                                                                                                                                                                                 ; irq4                                                                                                                                                                                                                                                                ;
+;  C  ; LC46       ; a[3], a[6], a[7], iorq_n, a[4], a[5], a[2]                                                                                                                                                                                                                                                                                                           ; cs_vi_n                                                                                                                                                                                                                                                             ;
+;  D  ; LC51       ; wr_n, wait_n                                                                                                                                                                                                                                                                                                                                         ; w1                                                                                                                                                                                                                                                                  ;
+;  D  ; LC62       ; reset_n                                                                                                                                                                                                                                                                                                                                              ; reset                                                                                                                                                                                                                                                               ;
+;  D  ; LC52       ; a[6], a[7], iorq_n, a[4], a[5], a[2], a[3]                                                                                                                                                                                                                                                                                                           ; cs_vv2_n                                                                                                                                                                                                                                                            ;
+;  D  ; LC49       ; clk, reset_n, ViClkDiv:viClkDiv|div1[0]                                                                                                                                                                                                                                                                                                              ; clk1                                                                                                                                                                                                                                                                ;
+;  D  ; LC64       ; a[3], a[6], a[7], iorq_n, a[4], a[5], a[2]                                                                                                                                                                                                                                                                                                           ; cs_vv1_n                                                                                                                                                                                                                                                            ;
+;  D  ; LC57       ; AyClkDiv:ayClkDiv|sum[9]                                                                                                                                                                                                                                                                                                                             ; debug                                                                                                                                                                                                                                                               ;
++-----+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------+
+; Fitter Device Options                                         ;
++----------------------------------------------+----------------+
+; Option                                       ; Setting        ;
++----------------------------------------------+----------------+
+; Enable user-supplied start-up clock (CLKUSR) ; Off            ;
+; Enable device-wide reset (DEV_CLRn)          ; Off            ;
+; Enable device-wide output enable (DEV_OE)    ; Off            ;
+; Enable INIT_DONE output                      ; Off            ;
+; Configuration scheme                         ; Passive Serial ;
+; Security bit                                 ; Off            ;
+; Base pin-out file on sameframe device        ; Off            ;
++----------------------------------------------+----------------+
+
+
++-----------------+
+; Fitter Messages ;
++-----------------+
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (119006): Selected device EPM7064STC44-7 for design "OrionCOM-AY"
+Warning (15705): Ignored locations or region assignments to the following nodes
+    Warning (15706): Node "TCK" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "TDI" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "TDO" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "TMS" is assigned to location or region, but does not exist in design
+Info: Quartus II 32-bit Fitter was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 294 megabytes
+    Info: Processing ended: Fri Feb  5 16:21:26 2021
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+
